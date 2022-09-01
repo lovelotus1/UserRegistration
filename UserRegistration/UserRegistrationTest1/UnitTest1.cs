@@ -5,7 +5,7 @@ namespace UserRegistrationTest1
     [TestClass]
     public class UnitTest1
     {
-        RegistrationPattern pattern = new RegistrationPattern();
+        //RegistrationPattern pattern = new RegistrationPattern();
         /// <summary>
         /// TestMethod for testing first name
         /// </summary>
@@ -163,5 +163,82 @@ namespace UserRegistrationTest1
                 System.Console.WriteLine(exception.Message);
             }
         }
+        /// <summary>
+        /// UC13
+        /// LamdaFunction TestCasess
+        /// </summary>
+
+        [TestMethod]
+        public void Given_First_Name_ShouldReturrns_True()
+        {
+            bool result = RegistrationPatternLamda.ValidatingFirstName("Aayush");
+            Assert.AreEqual(true, result);
+        }
+
+        /// <summary>
+        /// test method for checking false condition
+        /// </summary>
+        [TestMethod]
+        public void Given_First_Name_ShouldReturrns_False()
+        {
+            bool result = RegistrationPatternLamda.ValidatingFirstName("aayush");
+            Assert.AreEqual(false, result);
+        }
+        /// <summary>
+        /// test cases for lastName;
+        /// </summary>
+
+        [TestMethod]
+        public void Given_Last_Name_ShouldReturrns_True()
+        {
+            bool result = RegistrationPatternLamda.ValidatingLastName("Aryan");
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Given_Last_Name_ShouldReturrns_False()
+        {
+            bool result = RegistrationPatternLamda.ValidatingLastName("aryan");
+            Assert.AreEqual(false, result);
+        }
+        [TestMethod]
+        public void Given_Email_Should_Returrns_True()
+        {
+            bool result = RegistrationPatternLamda.ValidatingEmail("abc.xyz@bl.co.in");
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Given_Email_ShouldReturrns_False()
+        {
+            bool result = RegistrationPatternLamda.ValidatingEmail("abc.@gmail.com.com.com");
+            Assert.AreEqual(false, result);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        [TestMethod]
+        public void Given_Mobile_ShouldReturrns_True()
+        {
+            bool result = RegistrationPatternLamda.ValidateMobileNumber("91 9999955555");
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Given_Mobile_ShouldReturrns_False()
+        {
+            bool result = RegistrationPatternLamda.ValidateMobileNumber("1234567890");
+            Assert.AreEqual(false, result);
+        }
+        [TestMethod]
+        public void Given_Password_Should_Returrns_True()
+        {
+            bool result = RegistrationPatternLamda.ValidatePassword("Xyz@1234");
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Given_Password_ShouldReturrns_False()
+        {
+            bool result = RegistrationPatternLamda.ValidatePassword("123452345");
+            Assert.AreEqual(false, result);
+        }
     }
 }
+    
