@@ -16,6 +16,7 @@ namespace UserRegistration
         public static string RuleSecondPasswordRegex = "^(?=.*?[A-Z])[A-Za-z0-9@$!%*#?&]{8,}$";
         public static string RuleThirdPasswordRegex = "^(?=.*?[A-Z])(?=.*?[0-9])[A-Za-z0-9@$!%*#?&]{8,}$";
         public static string RuleFourthPasswordRegex = "^[A-Za-z0-9]*[@$!%*#?&]{1}[A-Za-z0-9]*$";
+        public static string SampleEmailRegex = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][0-9a-zA-Z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
         /// <summary>
         /// method for validating user firstName
         /// </summary>
@@ -82,6 +83,15 @@ namespace UserRegistration
         public static bool ValidetingRuleFourthPasswordFormat(string password)
         {
             return Regex.IsMatch(password, RuleFourthPasswordRegex);
+        }
+        /// <summary>
+        /// method for valideting email sample
+        /// </summary>
+        /// <param name="emailSample"></param>
+        /// <returns></returns>
+        public static bool ValidetingEmailSample(string emailSample)
+        {
+            return Regex.IsMatch(emailSample, SampleEmailRegex);
         }
     }
 }

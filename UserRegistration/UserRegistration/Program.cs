@@ -86,6 +86,16 @@ namespace UserRegistration
             {
                 Console.WriteLine("Password is INVALID !");
             }
+            Console.WriteLine("Enter SampleEmails :");
+            string sampleEmail = Console.ReadLine();
+            if (RegistrationPattern.ValidetingEmailSample(sampleEmail))
+            {
+                Console.WriteLine("Password is VALID !");
+            }
+            else
+            {
+                Console.WriteLine("Password is INVALID !");
+            }
         }
     }
 }
