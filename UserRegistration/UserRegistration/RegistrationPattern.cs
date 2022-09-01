@@ -9,6 +9,7 @@ namespace UserRegistration
     {
 
         public static string FirstNameRegex = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public static string LastNameRegex = "^[A-Z]{1}[A-Za-z]{2,}$";
         /// <summary>
         /// method for validating user firstName
         /// </summary>
@@ -17,6 +18,15 @@ namespace UserRegistration
         public static bool ValidetingFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, FirstNameRegex);
+        }
+        /// <summary>
+        /// method for validating LastName
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static bool ValidetingLastName(string name)
+        {
+            return Regex.IsMatch(name, LastNameRegex);
         }
     }
 }
