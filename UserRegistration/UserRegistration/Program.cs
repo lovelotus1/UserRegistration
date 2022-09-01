@@ -46,8 +46,16 @@ namespace UserRegistration
             {
                 Console.WriteLine("MobileNumber is INVALID !");
             }
-                
-
+            Console.WriteLine("Enter Rule1 PasswordFormat :");
+            string RuleOnePasswordFormat = Console.ReadLine();
+            if (RegistrationPattern.ValidetingRuleFirstPasswordFormat(RuleOnePasswordFormat))
+            {
+                Console.WriteLine("Password is VALID !");
+            }
+            else
+            {
+                Console.WriteLine("Password is INVALID !");
+            }
         }
     }
 }
