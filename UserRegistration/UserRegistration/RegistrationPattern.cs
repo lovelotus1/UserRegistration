@@ -13,6 +13,7 @@ namespace UserRegistration
         public static string EmailRegex = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
         public static string MobileFormatREGEX = "^[1-9]{1}[0-9]{1}[ ]{1}[1-9]{1}[0-9]{9}$";
         public static string RuleOnePasswordRegex = "^[A-Za-z0-9@$!%*#?&]{8,}$";
+        public static string RuleSecondPasswordRegex = "^(?=.*?[A-Z])[A-Za-z0-9@$!%*#?&]{8,}$";
         /// <summary>
         /// method for validating user firstName
         /// </summary>
@@ -52,6 +53,15 @@ namespace UserRegistration
         public static bool ValidetingRuleFirstPasswordFormat(string password)
         {
             return Regex.IsMatch(password, RuleOnePasswordRegex);
+        }
+        /// <summary>
+        /// method for validating Second rule password
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public static bool ValidetingRuleSecondPasswordFormat(string password)
+        {
+            return Regex.IsMatch(password, RuleSecondPasswordRegex);
         }
     }
 }

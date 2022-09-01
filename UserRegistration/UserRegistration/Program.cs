@@ -56,6 +56,16 @@ namespace UserRegistration
             {
                 Console.WriteLine("Password is INVALID !");
             }
+            Console.WriteLine("Enter Rule2 PasswordFormat :");
+            string RuleSecondPasswordFormat = Console.ReadLine();
+            if (RegistrationPattern.ValidetingRuleSecondPasswordFormat(RuleSecondPasswordFormat))
+            {
+                Console.WriteLine("Password is VALID !");
+            }
+            else
+            {
+                Console.WriteLine("Password is INVALID !");
+            }
         }
     }
 }
