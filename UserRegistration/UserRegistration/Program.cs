@@ -36,6 +36,18 @@ namespace UserRegistration
             {
                 Console.WriteLine("email is INVALID !");
             }
+            Console.WriteLine("Enter MobileNumber :");
+            string MobileNumber = Console.ReadLine();
+            if (RegistrationPattern.ValidetingMobileFormat(MobileNumber))
+            {
+                Console.WriteLine("MobileNumber is VALID !");
+            }
+            else
+            {
+                Console.WriteLine("MobileNumber is INVALID !");
+            }
+                
+
         }
     }
 }
