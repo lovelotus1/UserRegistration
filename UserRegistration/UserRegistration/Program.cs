@@ -6,7 +6,16 @@ namespace UserRegistration
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to UserRegistration !");
+            Console.WriteLine("Enter the  FirstName :");
+            string firstName = Console.ReadLine();
+            if (RegistrationPattern.ValidetingFirstName(firstName))
+            {
+                Console.WriteLine("First Name is VALID !");
+            }
+            else
+            {
+                Console.WriteLine("First Name is INVALID !");
+            }    
         }
     }
 }
